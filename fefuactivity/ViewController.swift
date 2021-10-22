@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
     var iconClick = false
     var iconClick1 = false
@@ -24,9 +24,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var dropDown: UIPickerView!
     @IBOutlet weak var buttonContinue: UIButton!
     @IBOutlet weak var textConf: UILabel!
+    @IBOutlet var fields: [UITextField]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        passwordField.delegate = self
+        passwordField1.delegate = self
+        for field in fields {
+            field.delegate = self
+        }
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
         imageIcon.image = UIImage(named:"eye")
         
@@ -79,7 +87,42 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
-    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+            print("TextField did begin editing method called")
+        if textField == self.textBox {
+            self.dropDown.isHidden = false
+//                buttonContinue.isHidden = true
+//                textConf.isHidden = true
+
+            textField.endEditing(true)
+        }
+
+        
+        }
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            print("TextField did end editing method called\(textField.text!)")
+        }
+        func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+            print("TextField should begin editing method called")
+            return true;
+        }
+        func textFieldShouldClear(_ textField: UITextField) -> Bool {
+            print("TextField should clear method called")
+            return true;
+        }
+        func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+            print("TextField should end editing method called")
+            return true;
+        }
+        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            print("While entering the characters this method gets called")
+            return true;
+        }
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            print("TextField should return method called")
+            textField.resignFirstResponder();
+            return true;
+        }
 
     @objc func imageTapped(tapGestureRecognizer:UITapGestureRecognizer)
     {
@@ -140,17 +183,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             self.dropDown.isHidden = true
 //            buttonContinue.isHidden = false
 //            textConf.isHidden = false
-        }
-
-        func textFieldDidBeginEditing(_ textField: UITextField) {
-
-            if textField == self.textBox {
-                self.dropDown.isHidden = false
-//                buttonContinue.isHidden = true
-//                textConf.isHidden = true
-
-                textField.endEditing(true)
-            }
         }
 
 }
