@@ -26,6 +26,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var textConf: UILabel!
     @IBOutlet var fields: [UITextField]!
     
+    
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
