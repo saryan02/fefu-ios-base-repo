@@ -7,6 +7,8 @@
 
 import UIKit
 
+var myIndex = 0
+
 class ListlViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -19,6 +21,7 @@ class ListlViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .always
         
         tableView.dataSource = self
+        tableView.rowHeight = 115
 
         registerCells()
     }
@@ -39,17 +42,30 @@ class ListlViewController: UIViewController {
 
 extension ListlViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        print(#function)
+        cell.layer.cornerRadius = 10
+        
         return cell
         
     }
     
+    
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+////        let destination = CellViewController()
+////      navigationController?.pushViewController(destination, animated: true)
+//        self.shouldPerformSegue(withIdentifier: "Showinfo", sender: self)
+//    }
+
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        myIndex = indexPath.row
+//        perfromSegue(withIdentifier: "Showinfo", sender: self)
+//    }
 
 
 }
