@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -49,10 +48,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="kFI-7B-tbI" firstAttribute="top" secondItem="dUF-k1-A5K" secondAttribute="bottom" constant="8" symbolic="YES" id="42d-QR-GrK"/>
                     <constraint firstAttribute="trailing" secondItem="kFI-7B-tbI" secondAttribute="trailing" constant="174" id="5sX-ti-wrB"/>
+                    <constraint firstAttribute="trailing" secondItem="dUF-k1-A5K" secondAttribute="trailing" constant="254" id="73F-Ov-NEA"/>
                     <constraint firstItem="czd-cr-GFt" firstAttribute="leading" secondItem="DCt-ub-cej" secondAttribute="trailing" constant="5.5" id="8lN-pG-jlw"/>
                     <constraint firstItem="dUF-k1-A5K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="DZ8-mS-nE1"/>
                     <constraint firstItem="dUF-k1-A5K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="I4k-AP-uNz"/>
@@ -66,10 +66,11 @@
                     <constraint firstAttribute="bottomMargin" secondItem="DCt-ub-cej" secondAttribute="bottom" constant="6" id="xn5-ID-y8v"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
-                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                 </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="cellIndexLabel" destination="H2p-sc-9uM" id="1LS-ge-HMK"/>
             </connections>
@@ -78,8 +79,5 @@
     </objects>
     <resources>
         <image name="bicycle.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

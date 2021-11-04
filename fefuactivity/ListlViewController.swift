@@ -9,7 +9,10 @@ import UIKit
 
 var myIndex = 0
 
-class ListlViewController: UIViewController {
+var section:[String] = ["A", "B", "C"]
+var titles: [String] = ["Today", "Yesterday", "1 October"]
+
+class ListlViewController: UIViewController,  UITableViewDelegate{
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,6 +23,7 @@ class ListlViewController: UIViewController {
         navigationItem.title = ""
         navigationItem.largeTitleDisplayMode = .always
         
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 115
 
@@ -48,7 +52,6 @@ extension ListlViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        cell.layer.cornerRadius = 10
         
         return cell
         
@@ -61,12 +64,26 @@ extension ListlViewController: UITableViewDataSource{
 ////      navigationController?.pushViewController(destination, animated: true)
 //        self.shouldPerformSegue(withIdentifier: "Showinfo", sender: self)
 //    }
+//
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "Showinfo", sender: self)
+    }
 
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        myIndex = indexPath.row
-//        perfromSegue(withIdentifier: "Showinfo", sender: self)
+    
+    
+//    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+//        return section
 //    }
-
+    
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "\(titles[section])"
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
 
 }
 
