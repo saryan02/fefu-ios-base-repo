@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Smp-I2-84V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1803" y="1690"/>
+            <point key="canvasLocation" x="43" y="1775"/>
         </scene>
         <!--Активность -->
         <scene sceneID="hmA-k2-qxG">
@@ -184,6 +184,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="1Iu-MO-1Dc" kind="push" id="rZg-Ld-2vv"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAR-bB-bV6">
                                 <rect key="frame" x="20" y="439" width="374" height="128"/>
@@ -248,6 +251,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxX-wh-8jQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1802.8985507246377" y="975.66964285714278"/>
+        </scene>
+        <!--Новая активность-->
+        <scene sceneID="Tyz-bF-2th">
+            <objects>
+                <viewController id="1Iu-MO-1Dc" customClass="MapViewController" customModule="fefuactivity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z14-MY-DZm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7eg-JV-Rcf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yLg-IT-v9h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yLg-IT-v9h" firstAttribute="bottom" secondItem="7eg-JV-Rcf" secondAttribute="bottom" id="LLY-mE-kLt"/>
+                            <constraint firstItem="yLg-IT-v9h" firstAttribute="trailing" secondItem="7eg-JV-Rcf" secondAttribute="trailing" id="WPy-46-nBR"/>
+                            <constraint firstItem="7eg-JV-Rcf" firstAttribute="top" secondItem="yLg-IT-v9h" secondAttribute="top" id="jha-pw-9jj"/>
+                            <constraint firstItem="7eg-JV-Rcf" firstAttribute="leading" secondItem="yLg-IT-v9h" secondAttribute="leading" id="l6b-A2-rg2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Новая активность" id="3I5-cP-kQc"/>
+                    <connections>
+                        <outlet property="mapOutlet" destination="7eg-JV-Rcf" id="SfX-7a-whD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SAk-Bq-Lww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="1775"/>
         </scene>
         <!--Велосипед-->
         <scene sceneID="jhU-KY-H06">
