@@ -13,9 +13,6 @@
 		1DE4E5CC270A5CCE004A30CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE4E5CA270A5CCE004A30CA /* Main.storyboard */; };
 		1DE4E5CE270A5CD0004A30CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DE4E5CD270A5CD0004A30CA /* Assets.xcassets */; };
 		1DE4E5D1270A5CD0004A30CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE4E5CF270A5CD0004A30CA /* LaunchScreen.storyboard */; };
-		9E38B34B274F480D00CA13B8 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38B34A274F480D00CA13B8 /* CollectionViewCell.swift */; };
-		9E38B3602758859A00CA13B8 /* SaveActivity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E38B35E2758859A00CA13B8 /* SaveActivity.xcdatamodeld */; };
-		9E38B36227588C4200CA13B8 /* FEFUCoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38B36127588C4200CA13B8 /* FEFUCoreDataContainer.swift */; };
 		9E8DA75D27339BC2007B31D8 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8DA75C27339BC2007B31D8 /* MainTableViewController.swift */; };
 		9E8DA75F274616D6007B31D8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8DA75E274616D6007B31D8 /* MapViewController.swift */; };
 		9E98752727227D2A002439A8 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E98752627227D2A002439A8 /* NavViewController.swift */; };
@@ -35,9 +32,6 @@
 		1DE4E5CD270A5CD0004A30CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DE4E5D0270A5CD0004A30CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DE4E5D2270A5CD0004A30CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E38B34A274F480D00CA13B8 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		9E38B35F2758859A00CA13B8 /* SaveActivity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaveActivity.xcdatamodel; sourceTree = "<group>"; };
-		9E38B36127588C4200CA13B8 /* FEFUCoreDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FEFUCoreDataContainer.swift; sourceTree = "<group>"; };
 		9E8DA75C27339BC2007B31D8 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		9E8DA75E274616D6007B31D8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9E98752627227D2A002439A8 /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +76,6 @@
 				1DE4E5C4270A5CCE004A30CA /* AppDelegate.swift */,
 				1DE4E5C6270A5CCE004A30CA /* SceneDelegate.swift */,
 				1DE4E5C8270A5CCE004A30CA /* ViewController.swift */,
-				9E38B36127588C4200CA13B8 /* FEFUCoreDataContainer.swift */,
 				1DE4E5CA270A5CCE004A30CA /* Main.storyboard */,
 				1DE4E5CD270A5CD0004A30CA /* Assets.xcassets */,
 				1DE4E5CF270A5CD0004A30CA /* LaunchScreen.storyboard */,
@@ -93,7 +86,6 @@
 				9E8DA75E274616D6007B31D8 /* MapViewController.swift */,
 				9E987541272A4A3F002439A8 /* ListlViewController.swift */,
 				9E8DA75C27339BC2007B31D8 /* MainTableViewController.swift */,
-				9E38B35E2758859A00CA13B8 /* SaveActivity.xcdatamodeld */,
 			);
 			path = fefuactivity;
 			sourceTree = "<group>";
@@ -103,7 +95,6 @@
 			children = (
 				9E98753C272A400F002439A8 /* TableViewCell.xib */,
 				9E98753B272A400F002439A8 /* TableViewCell.swift */,
-				9E38B34A274F480D00CA13B8 /* CollectionViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -180,15 +171,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DE4E5C9270A5CCE004A30CA /* ViewController.swift in Sources */,
-				9E38B3602758859A00CA13B8 /* SaveActivity.xcdatamodeld in Sources */,
 				9E987542272A4A3F002439A8 /* ListlViewController.swift in Sources */,
-				9E38B34B274F480D00CA13B8 /* CollectionViewCell.swift in Sources */,
 				9E987544272BBD33002439A8 /* CellViewController.swift in Sources */,
 				9E8DA75F274616D6007B31D8 /* MapViewController.swift in Sources */,
 				9E98752727227D2A002439A8 /* NavViewController.swift in Sources */,
 				9E8DA75D27339BC2007B31D8 /* MainTableViewController.swift in Sources */,
 				1DE4E5C5270A5CCE004A30CA /* AppDelegate.swift in Sources */,
-				9E38B36227588C4200CA13B8 /* FEFUCoreDataContainer.swift in Sources */,
 				9E98753D272A400F002439A8 /* TableViewCell.swift in Sources */,
 				1DE4E5C7270A5CCE004A30CA /* SceneDelegate.swift in Sources */,
 				9EA5CBBB2717D41B00E658F1 /* RegViewController.swift in Sources */,
@@ -395,19 +383,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		9E38B35E2758859A00CA13B8 /* SaveActivity.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				9E38B35F2758859A00CA13B8 /* SaveActivity.xcdatamodel */,
-			);
-			currentVersion = 9E38B35F2758859A00CA13B8 /* SaveActivity.xcdatamodel */;
-			path = SaveActivity.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1DE4E5B9270A5CCE004A30CA /* Project object */;
 }
