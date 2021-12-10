@@ -8,7 +8,12 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
+    var model: ActivitiesTableModel?
 
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var disstanceLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var cellIndexLabel: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +29,15 @@ class TableViewCell: UITableViewCell {
         super.layoutSubviews()
 
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+    }
+    
+    func bild (_ model: ActivitiesTableModel){
+        dateLabel.text = model.date
+        typeLabel.text = model.type
+        disstanceLabel.text = String(model.distance)
+        durationLabel.text = model.duration
+        
+        
     }
     
     

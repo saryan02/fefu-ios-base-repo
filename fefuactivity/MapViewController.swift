@@ -9,16 +9,19 @@ import UIKit
 import CoreLocation
 import MapKit
 
-var cellIndex = 0
-var prevDate = Date()
-var isPaused = false
-var timer = Timer()
-var pauseDate = Date()
-var prevDiff = TimeInterval()
-var startDate  =  Date()
-var start : CLLocation?
+
 
 class MapViewController: UIViewController {
+    
+    
+    var cellIndex = 0
+    var prevDate = Date()
+    var isPaused = false
+    var timer = Timer()
+    var pauseDate = Date()
+    var prevDiff = TimeInterval()
+    var startDate  =  Date()
+    var start : CLLocation?
     
     private let fefuCoreDate = FEFUCoreDataContainer.instance
     
@@ -154,6 +157,14 @@ class MapViewController: UIViewController {
         userActivity.activityType = "На велике"
  
         userActivity.activityDistance = Double(String(format: "%.2f", start!.distance(from: finish!) / 1_000))!
+        
+        do{
+            try fefuCoreDate.context.save()
+            print(fefuCoreDate)
+            
+        }catch{
+            print("не сохранился(")
+        }
        
     }
     

@@ -73,6 +73,10 @@
             <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="cellIndexLabel" destination="H2p-sc-9uM" id="1LS-ge-HMK"/>
+                <outlet property="dateLabel" destination="haS-IE-y0m" id="WDy-EQ-VdP"/>
+                <outlet property="disstanceLabel" destination="dUF-k1-A5K" id="Dfq-GX-m7z"/>
+                <outlet property="durationLabel" destination="kFI-7B-tbI" id="lAz-1v-X2c"/>
+                <outlet property="typeLabel" destination="czd-cr-GFt" id="HD2-WJ-k8m"/>
             </connections>
             <point key="canvasLocation" x="154.34782608695653" y="115.84821428571428"/>
         </tableViewCell>

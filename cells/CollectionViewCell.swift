@@ -14,16 +14,11 @@ class CollectionViewCell: UICollectionViewCell {
 
     override var isSelected: Bool{
         didSet{
-            if self.isSelected{
-                
-                self.layer.borderWidth = 2.0
-                self.layer.borderColor = UIColor.purple.cgColor
-            }else{
-                self.layer.borderWidth = 1.0
-                self.layer.borderColor = UIColor.lightGray.cgColor
-            }
+       
+            layer.borderWidth = isSelected ? 2 : 1
+            layer.borderColor = isSelected ? UIColor.purple.cgColor : UIColor.lightGray.cgColor
             
-            }
+        }
     }
     
 }
