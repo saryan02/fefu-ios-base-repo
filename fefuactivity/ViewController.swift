@@ -19,24 +19,21 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     var list = ["Мужской", "Женский", "Другой"]
     
+    @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField, passwordField1: UITextField!
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var dropDown: UIPickerView!
     @IBOutlet weak var buttonContinue: UIButton!
     @IBOutlet weak var textConf: UILabel!
-    @IBOutlet var fields: [UITextField]!
-    
-    
-  
+
+    @IBOutlet weak var nameField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         passwordField.delegate = self
         passwordField1.delegate = self
-        for field in fields {
-            field.delegate = self
-        }
+        nameField.delegate = self
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
         imageIcon.image = UIImage(named:"eye")
@@ -187,6 +184,54 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 //            buttonContinue.isHidden = false
 //            textConf.isHidden = false
         }
+    
+    @IBAction func didTapContinue(_ sender: Any){
+        let login = loginField.text ?? ""
+        let password = passwordField.text ?? ""
+        let confirmPassword = passwordField1.text ?? ""
+        let name = nameField.text ?? ""
+        let gender = textBox.text ?? ""
+        var genderNum = 0
+        switch gender {
+        case "Мужской":
+            genderNum = 0
+        case "Женский":
+            genderNum = 1
+        case "Другой":
+            genderNum = 2
+        default:
+            genderNum = 0
+        }
+        
+        if password != confirmPassword{
+            print("Разные пароли")
+        }
+        
+        let body = RegModel(login: login, password: password, confirmPassword: confirmPassword, gender: genderNum, name: name)
+        
+        do {
+            let requestBody = try Auth.encoder.encode(body)
+            let queue = DispatchQueue.global(qos: .utility)
+            
+            Auth.register(requestBody) { user in
+                queue.async {
+                    UserDefaults.standard.set(user.token, forKey: "token")
+                }
+                
+//                DispatchQueue.main.async {
+//                    let vc = ListlViewController(nibName: "ListlViewController", bundle: nil)
+//                    vc.modalPresentationStyle = .fullScreen
+//                    self.present(vc, animated: true, completion: nil)
+//                }
+            
+            } errors: { err in
+                print("Something wrong \(err)")
+            }
+            
+        } catch {
+            print(error)
+        }
+    }
 
 }
 
