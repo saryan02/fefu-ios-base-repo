@@ -24,6 +24,9 @@
 		9E987542272A4A3F002439A8 /* ListlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E987541272A4A3F002439A8 /* ListlViewController.swift */; };
 		9E987544272BBD33002439A8 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E987543272BBD33002439A8 /* CellViewController.swift */; };
 		9EA5CBBB2717D41B00E658F1 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5CBBA2717D41B00E658F1 /* RegViewController.swift */; };
+		9EC6645A276AE68600C700F7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC66459276AE68600C700F7 /* Models.swift */; };
+		9EC6645C276AEFBF00C700F7 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6645B276AEFBF00C700F7 /* AuthController.swift */; };
+		9EC6645E276B05EE00C700F7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6645D276B05EE00C700F7 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		9E987541272A4A3F002439A8 /* ListlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListlViewController.swift; sourceTree = "<group>"; };
 		9E987543272BBD33002439A8 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
 		9EA5CBBA2717D41B00E658F1 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
+		9EC66459276AE68600C700F7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		9EC6645B276AEFBF00C700F7 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		9EC6645D276B05EE00C700F7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +99,10 @@
 				9E8DA75E274616D6007B31D8 /* MapViewController.swift */,
 				9E987541272A4A3F002439A8 /* ListlViewController.swift */,
 				9E8DA75C27339BC2007B31D8 /* MainTableViewController.swift */,
+				9EC66459276AE68600C700F7 /* Models.swift */,
+				9EC6645B276AEFBF00C700F7 /* AuthController.swift */,
 				9E38B35E2758859A00CA13B8 /* SaveActivity.xcdatamodeld */,
+				9EC6645D276B05EE00C700F7 /* SignInViewController.swift */,
 			);
 			path = fefuactivity;
 			sourceTree = "<group>";
@@ -186,12 +195,15 @@
 				9E987544272BBD33002439A8 /* CellViewController.swift in Sources */,
 				9E8DA75F274616D6007B31D8 /* MapViewController.swift in Sources */,
 				9E98752727227D2A002439A8 /* NavViewController.swift in Sources */,
+				9EC6645C276AEFBF00C700F7 /* AuthController.swift in Sources */,
 				9E8DA75D27339BC2007B31D8 /* MainTableViewController.swift in Sources */,
 				1DE4E5C5270A5CCE004A30CA /* AppDelegate.swift in Sources */,
 				9E38B36227588C4200CA13B8 /* FEFUCoreDataContainer.swift in Sources */,
 				9E98753D272A400F002439A8 /* TableViewCell.swift in Sources */,
+				9EC6645E276B05EE00C700F7 /* SignInViewController.swift in Sources */,
 				1DE4E5C7270A5CCE004A30CA /* SceneDelegate.swift in Sources */,
 				9EA5CBBB2717D41B00E658F1 /* RegViewController.swift in Sources */,
+				9EC6645A276AE68600C700F7 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
